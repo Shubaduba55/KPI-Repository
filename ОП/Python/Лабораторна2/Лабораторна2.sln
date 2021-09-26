@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Лабораторна2", "Лабораторна2\Лабораторна2.pyproj", "{C0BED6E5-AE33-4BAD-BCC1-AFE42F872317}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C0BED6E5-AE33-4BAD-BCC1-AFE42F872317}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0BED6E5-AE33-4BAD-BCC1-AFE42F872317}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {84D44D85-529A-4780-94C4-B9C744115D32}
+	EndGlobalSection
+EndGlobal
