@@ -1,32 +1,46 @@
 #include <iostream>
-
 using namespace std;
 
-int main() {
-    int n;
-    int kilk = 0;
-    int dil;
+int main() 
+{
+    int n; //кількість простих чисел
+    int kilk;//кількість виведених простих чисел
+    int dil;//змінна для перевірки ділення
     bool Bool;
-    cout << "enter quantity of prime numbers" << endl;
+    
+    cout << "enter quantity of prime numbers(n>=1(int))" << endl;//Запит на кількість простих чисел
     cin >> n;
-    if (n == 1) cout << "prime number is 2" << endl;
-    else {
-        cout << "prime number is 2" << endl;
-        for (int num_now = 3; kilk != n-1; num_now += 2) {
-            dil = 3;
-            Bool = true;
-            int kilk1 = kilk;
-            while (Bool && kilk==kilk1) {
-                if (num_now / dil == 1)
-                {
-                    cout << "prime number is " << num_now << endl;
-                    kilk += 1;
-                }
-                else if (num_now % dil != 0) dil += 2;
-                else Bool = false;
+    if (n == 1)
+    {
+        kilk = 1;
+        cout << "Prime number is 2" << endl;
+    }
+    else{
+        cout << "Prime number is 2" << endl;///Виводимо число 2 та 3 - перші прості числа
+        cout << "Prime number is 3" << endl;//(це було зроблено покращення алгоритму та його пришвидшення. Але через ці модифікації він не здатен вивести ці числа самостійно)
+        kilk = 2;
+    }
+    
+    
+    
+    for (int num_now = 5; kilk != n; num_now += 2)//Перевіряємо, чи є числа num_now простими
+    {
+        dil = 3; //Задаємо числу для ділення значення три
+        Bool = true;
+        int kilk1 = kilk;//Записуємо останнє значення кількості виведених простих чисел в kilk1
+        while (Bool && kilk==kilk1)//Перевіряємо значення булеовї змінної та чи не змінилася кількість виведених простих чисел
+        {
+            if ((double(num_now) / dil) == (num_now / dil)) Bool = false; //Перевіряємо, чи ділиться число націло. Якщо так, то виходимо з циклу
+            else if (num_now / dil < dil)                                 //Перевіряємо, чи результат ділення менший за дільник. Якщо так, то це і є наше просте число, 
+            {                                                             //адже до цього ми перевірили, що воно не ділиться націло на попередні числа. Наприклад, число 131 - є простим. Після того, як ми поділимо його на 13:
+                                                                          // 131 / 13 = 10.074, то нам немає сенсу далі ділити, адже наступні результати від ділення будуть повторювати попередні значення, які ми вже могли б отримати.
+    
+                cout << "prime number is " << num_now << endl;
+                kilk += 1; // Виводимо просте число та збільшуємо кількість виведнеих чисел на 1
             }
+            else dil += 2; // збільшуємо значення числа для перевірки ділення на 2
         }
-
     }
     return 0;
+
 }
