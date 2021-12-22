@@ -1,8 +1,11 @@
 import string 
 def CreateArray(b:int, k:int, start:int):
     A=[]
+   
     for i in range(start, start+10):
         A.append(chr(b+k*i))
+        #print(ord(A[k]), end=', ')
+    
     return A
 
 
@@ -17,11 +20,9 @@ def ArraySame(A, B):
     return C
 
 def FindDiv(C):
-   
     count=0
-    for i in range (len(C)-1):
-        if ord(C[i])/3==ord(C[i])//3:
-            
+    for i in range (len(C)):
+        if ord(C[i])%3==0 and ord(C[i])!=0:
             count+=1
     return count
 
@@ -32,6 +33,6 @@ print(*A, sep=' ')
 print(*B, sep=' ')
 print(*C, sep=' ')
 count=FindDiv(C)
-print("The quantity of such nubers is", count)
+print("The quantity of such numbers is", count)
 
 
