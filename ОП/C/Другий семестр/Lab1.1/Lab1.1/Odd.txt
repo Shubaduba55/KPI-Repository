@@ -1,0 +1,12 @@
+int main()
+{
+int a             =0;
+a=a+56;
+a=75825;
+float b=56.8;
+string name    = "play the game";
+while(a==true){
+cout<<"Let me entertain you";
+}
+return 0;
+}
