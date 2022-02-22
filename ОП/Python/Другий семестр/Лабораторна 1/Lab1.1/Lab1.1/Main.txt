@@ -72,15 +72,3 @@ reateMainTXT()
 eadTXT("Main.txt")
 earch("Main.txt","ID.txt")
 eadTXT("ID.txt")
-גא³גא
-גא³ג
-
-גגא³ג
-א
-ג
-
-ןאנן
-³ןגא
-
-³
-³
